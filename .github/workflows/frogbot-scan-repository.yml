@@ -17,6 +17,10 @@ jobs:
         # The repository scanning will be triggered periodically on the following branches.
         branch: [ "main","pr" ]
     steps:
+      - uses: actions/setup-java@v3
+        with:
+          distribution: 'zulu' # See 'Supported distributions' for available options
+          java-version: '17'
       - uses: jfrog/frogbot@v2
         env:
           JFROG_CLI_LOG_LEVEL: "DEBUG"
