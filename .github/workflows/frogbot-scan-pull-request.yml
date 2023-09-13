@@ -16,6 +16,7 @@ jobs:
         with:
             distribution: 'zulu' # See 'Supported distributions' for available options
             java-version: '17'
+      - run: echo "M2_HOME=/usr/share/apache-maven-3.8.8" >> $GITHUB_ENV
       - uses: jfrog/frogbot@v2
         env:
           JFROG_CLI_LOG_LEVEL: "DEBUG"
