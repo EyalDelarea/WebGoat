@@ -21,6 +21,10 @@ jobs:
         with:
           distribution: 'zulu' 
           java-version: '17'
+      - run: |
+          echo $PATH
+          mvn --version
+          whereis mvn
       - uses: jfrog/frogbot@v2
         env:
           JFROG_CLI_LOG_LEVEL: "DEBUG"
