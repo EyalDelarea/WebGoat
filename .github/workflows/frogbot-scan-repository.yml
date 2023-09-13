@@ -21,6 +21,7 @@ jobs:
         with:
           distribution: 'zulu' 
           java-version: '17'
+      - run: echo "M2_HOME=/usr/share/apache-maven-3.8.8" >> $GITHUB_ENV
       - run: |
           echo $PATH
           mvn --version
